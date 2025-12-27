@@ -28,16 +28,16 @@ const server = http.createServer((req, res) => {
         const url = new URL(req.url, `http://${req.headers.host}`);
         temperature = url.searchParams.get('temperature');
         if(temperature < 10){
-            condition = "ঠান্ডায় গাড় জমে গেলো 🥶| ";
+            condition = "ঠান্ডায় জমে গেলাম 🥶| ";
         }else if(temperature >= 10 && temperature <= 15){
-            condition = "বেশ ঠান্ডা লাগছে বাল ❄️|";
+            condition = "বেশ ঠান্ডা লাগছে❄️|";
         }
 else if(temperature >= 15 && temperature <= 35){
             condition = "বেশ গরম|";
         }
 
 else{
-            condition = "গরমে গাড় গোলে গেলো বাল 🔥|";
+            condition = "প্রচন্ড গরম 🔥|";
         }
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
@@ -54,5 +54,6 @@ else{
 server.listen(PORT, HOSTNAME, () => {
   console.log(`Server running at http://${HOSTNAME}:${PORT}/`);
 });
+
 
 
