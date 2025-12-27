@@ -56,5 +56,3 @@ server.listen(PORT, HOSTNAME, () => {
 });
 
 
-
-no gpt
