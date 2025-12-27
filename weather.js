@@ -27,12 +27,17 @@ const server = http.createServer((req, res) => {
     else if (req.url.startsWith('/update-weather')) {
         const url = new URL(req.url, `http://${req.headers.host}`);
         temperature = url.searchParams.get('temperature');
-        if(temperature < 15){
-            condition = "প্রচন্ড ঠান্ডা বাল 🥶| ";
-        }else if(temperature >= 15 && temperature <= 25){
-            condition = "বেশ ঠান্ডা লাগছে ❄️|";
-        }else{
-            condition = "প্রচন্ড গরম🔥|";
+        if(temperature < 10){
+            condition = "ঠান্ডায় গাড় জমে গেলো 🥶| ";
+        }else if(temperature >= 10 && temperature <= 15){
+            condition = "বেশ ঠান্ডা লাগছে বাল ❄️|";
+        }
+else if(temperature >= 15 && temperature <= 35){
+            condition = "বেশ গরম|";
+        }
+
+else{
+            condition = "গরমে গাড় গোলে গেলো বাল 🔥|";
         }
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
@@ -51,3 +56,5 @@ server.listen(PORT, HOSTNAME, () => {
 });
 
 
+
+no gpt
