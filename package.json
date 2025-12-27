@@ -1,0 +1,17 @@
+{
+"name": "simple-weather-server",
+"version": "1.0.0",
+"description": "Simple Node.js HTTP weather server",
+"main": "weather.js",
+"scripts": {
+"start": "node weather.js"
+},
+"keywords": [
+"node",
+"http",
+"weather",
+"esp32"
+],
+"author": "Rakesh Karmakar",
+"license": "MIT"
+}
