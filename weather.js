@@ -1,6 +1,6 @@
 const http = require('http');
 
-const PORT = 3000;
+const PORT = 8000;
 const HOSTNAME = 'localhost';
 
 let temperature;
@@ -49,3 +49,4 @@ const server = http.createServer((req, res) => {
 server.listen(PORT, HOSTNAME, () => {
   console.log(`Server running at http://${HOSTNAME}:${PORT}/`);
 });
+
